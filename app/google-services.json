@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "407487149238",
+    "project_id": "trendlink-b150e",
+    "storage_bucket": "trendlink-b150e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407487149238:android:fc3482e87387d23e9a6217",
+        "android_client_info": {
+          "package_name": "com.lrincon.trendlink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3ccQLrAwgOFVO7VEdo4cgvFVxOL4ZW2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
