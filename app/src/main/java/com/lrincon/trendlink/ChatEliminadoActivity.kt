@@ -1,13 +1,11 @@
 package com.lrincon.trendlink
 
 import android.os.Bundle
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
-
+class ChatEliminadoActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         var inicioFragment = InicioFragment()
         var busquedaFragment = BusquedaFragment()
         var crearFragment = CrearFragment()
-        var mensajesFragment = MensajesFragment()
+        var chatEliminadoFragment = ChatEliminadoFragment()
         var perfilFragment = PerfilFragment()
 
         bottomNavigationView.setOnNavigationItemSelectedListener {
@@ -35,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_mensajes -> {
-                    setCurrentFragment(mensajesFragment)
+                    setCurrentFragment(chatEliminadoFragment)
                     true
                 }
                 R.id.nav_perfil -> {

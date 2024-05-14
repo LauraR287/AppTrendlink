@@ -30,8 +30,7 @@ class MensajesActivity : AppCompatActivity() {
         }
 
         buttonAtras.setOnClickListener {
-            val fragment = MensajesFragment()
-            replaceFragment(fragment)
+            onBackPressed()
         }
 
         buttonPerfil.setOnClickListener {
