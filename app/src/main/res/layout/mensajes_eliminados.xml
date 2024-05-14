@@ -161,20 +161,6 @@
         app:layout_constraintVertical_bias="0.965"
         app:layout_constraintWidth_percent="0.3" />
 
-    <View
-        android:id="@+id/greyBox4"
-        android:layout_width="223dp"
-        android:layout_height="40dp"
-        android:background="@drawable/cuadro_gris_redondeado"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.3"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35"
-        app:layout_constraintWidth_percent="0.3" />
 
     <View
         android:id="@+id/greyBox1"
@@ -231,34 +217,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.267" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="196dp"
-        android:layout_height="25dp"
-        android:fontFamily="@font/news_cycle"
-        android:gravity="right"
-        android:text="Muchas gracias Valentina"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.832"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352" />
-
-    <ImageButton
-        android:id="@+id/eliminarMensaje"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.357"
-        app:srcCompat="@drawable/circulo_de_basura__1_" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
