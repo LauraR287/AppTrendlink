@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".InicioFragment"
+    tools:ignore="MissingClass">
+
+    <!-- INICIO ENCABEZADO DE LA APP -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="409dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="255dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="393dp"
+            android:layout_height="383dp"
+            android:src="@drawable/cuadro_gris_oscuro_redondeado"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <ImageView
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/usuario_gris"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="41dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="301dp"
+            android:layout_height="78dp"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="25dp">
+
+            <ImageView
+                android:layout_width="292dp"
+                android:layout_height="69dp"
+                android:src="@drawable/cuadrado_gris_redondeado_2"
+                tools:layout_editor_absoluteX="4dp"
+                tools:layout_editor_absoluteY="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Juan Camilo Rodriguez"
+                android:textColor="#3A0CA3"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="17dp"
+                tools:layout_editor_absoluteY="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Me encantaría ayudarte. Escribeme :)"
+                android:textColor="#3A0CA3"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="43dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="344dp"
+            android:layout_height="48dp"
+            tools:layout_editor_absoluteX="34dp"
+            tools:layout_editor_absoluteY="296dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/news_cycle"
+        android:text="TrendLink"
+        android:textColor="#3A0CA3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="14dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/separador_v2"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <!-- FIN ENCABEZADO DE LA APP -->
+
+
+    <ImageView
+        android:id="@+id/perfil1"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:src="@drawable/usuario_gris"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        app:menu="@menu/nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="225dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/news_cycle"
+        android:text="Valentina Hernandez"
+        android:textColor="#3A0CA3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <TextView
+        android:id="@+id/rol"
+        android:layout_width="145dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/news_cycle"
+        android:text="Común"
+        android:textColor="#3A0CA3"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="103dp" />
+
+    <TextView
+        android:id="@+id/publicación"
+        android:layout_width="343dp"
+        android:layout_height="49dp"
+        android:fontFamily="@font/news_cycle"
+        android:text="Hola a todos ¿Alguien podría diseñar mi vestido de bodas?"
+        android:textColor="#3A0CA3"
+        android:textSize="16sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="144dp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/separador_v1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="241dp" />
+
+    <ImageButton
+        android:id="@+id/like"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Dar like a publicación"
+        android:src="@drawable/corazon"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="193dp" />
+
+    <ImageButton
+        android:id="@+id/comment_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Comentar la publicación"
+        android:src="@drawable/comentario"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="193dp"
+        android:hint="Escribe tu comentario"
+        android:singleLine="false"
+        android:imeOptions="actionDone"
+        android:padding="12dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
