@@ -15,6 +15,7 @@ class MainActivityLogin: AppCompatActivity() {
     private lateinit var editTextPassword: EditText
     private lateinit var buttonLogin: Button
     private lateinit var forgotPassword: TextView
+    private lateinit var newAccount: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +26,7 @@ class MainActivityLogin: AppCompatActivity() {
         editTextPassword = findViewById(R.id.editTextPassword)
         buttonLogin = findViewById(R.id.buttonLogin)
         forgotPassword = findViewById<TextView>(R.id.forgotPassword)
+        newAccount = findViewById<TextView>(R.id.newAccount)
 
 
         buttonLogin.setOnClickListener {
@@ -53,19 +55,22 @@ class MainActivityLogin: AppCompatActivity() {
                             Toast.makeText(this, "Inicio de sesión fallido", Toast.LENGTH_SHORT).show()
                         }
                     }
-
-
             }
         }
-/*
+
         forgotPassword.setOnClickListener {
-            // Acción a realizar cuando se hace clic en el TextView
             Toast.makeText(this, "Recuperar contraseña", Toast.LENGTH_SHORT).show()
 
-            // Ejemplo: abrir una nueva actividad para recuperar contraseña
             val intent = Intent(this, PasswordRecoveryActivity::class.java)
             startActivity(intent)
         }
-        */
+
+        newAccount.setOnClickListener {
+            Toast.makeText(this, "Recuperar contraseña", Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this, CreateAccountActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
