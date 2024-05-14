@@ -33,6 +33,7 @@
         tools:layout_editor_absoluteX="0dp" />
     <!-- FIN ENCABEZADO DE LA APP -->
 
+
     <!-- Barra de busqueda -->
     <ImageButton
         android:id="@+id/imageView4"
