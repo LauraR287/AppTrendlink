@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "475501940210",
+    "project_id": "trendlink-447b7",
+    "storage_bucket": "trendlink-447b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475501940210:android:7215ab2ff8ff69864eef6b",
+        "android_client_info": {
+          "package_name": "com.example.apptrendlink_valentin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZny_WuqIbIJ3dZhQQGZhXYWMrIFHuBKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
