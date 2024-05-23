@@ -9,14 +9,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
-class MainActivityLogin: AppCompatActivity() {
+class LoginActivity: AppCompatActivity() {
 
     private lateinit var editTextUser: EditText
     private lateinit var editTextPassword: EditText
     private lateinit var buttonLogin: Button
     private lateinit var forgotPassword: TextView
     private lateinit var newAccount: TextView
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +26,6 @@ class MainActivityLogin: AppCompatActivity() {
         buttonLogin = findViewById(R.id.buttonLogin)
         forgotPassword = findViewById<TextView>(R.id.forgotPassword)
         newAccount = findViewById<TextView>(R.id.newAccount)
-
 
         buttonLogin.setOnClickListener {
             val user = editTextUser.text.toString()
@@ -47,7 +45,7 @@ class MainActivityLogin: AppCompatActivity() {
                             val user = auth.currentUser
                             // Hacer algo con el usuario autenticado
                             Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this, MainActivity::class.java)
+                            val intent = Intent(this, MenuActivity::class.java)
                             startActivity(intent)
                             finish()
                         } else {
@@ -59,16 +57,12 @@ class MainActivityLogin: AppCompatActivity() {
         }
 
         forgotPassword.setOnClickListener {
-            Toast.makeText(this, "Recuperar contraseña", Toast.LENGTH_SHORT).show()
-
             val intent = Intent(this, PasswordRecoveryActivity::class.java)
             startActivity(intent)
         }
 
         newAccount.setOnClickListener {
-            Toast.makeText(this, "Recuperar contraseña", Toast.LENGTH_SHORT).show()
-
-            val intent = Intent(this, CreateAccountActivity::class.java)
+            val intent = Intent(this, NewAccountActivity::class.java)
             startActivity(intent)
         }
 

@@ -8,6 +8,24 @@
     android:background="#FFFFFF">>
 
     <!-- INICIO ENCABEZADO DE LA APP -->
+
+    <TextView
+        android:id="@+id/textPublicaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="362dp"
+        android:fontFamily="@font/news_cycle"
+        android:text="Publicaciones:"
+        android:textColor="#3A0CA3"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -33,6 +51,154 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <!-- FIN ENCABEZADO DE LA APP -->
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115"
+        app:srcCompat="@drawable/usuario"
+        app:tint="#828282" />
+
+    <ImageButton
+        android:id="@+id/EditarPerfil"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209"
+        app:srcCompat="@drawable/lapiz"
+        app:tint="#8000FF"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <TextView
+        android:id="@+id/textNombreEnPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/news_cycle"
+        android:text="Nombre"
+        android:textColor="#3A0CA3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageSeparador2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.303" />
+
+    <TextView
+        android:id="@+id/textCiudad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/news_cycle"
+        android:text="Bogotá, Colombia"
+        android:textColor="#3A0CA3"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageSeparador2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.592" />
+
+
+    <TextView
+        android:id="@+id/CerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="48dp"
+        android:clickable="true"
+        android:drawablePadding="8dp"
+        android:focusable="true"
+        android:fontFamily="@font/news_cycle"
+        android:text="Cerrar Sesión"
+        android:textColor="#8000FF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/CerrarSesionLogo"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212"
+        app:srcCompat="@drawable/exit"
+        app:tint="#8000FF"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <ImageView
+        android:id="@+id/imageSeparador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:layout_weight="1"
+        android:src="@drawable/separador_v1"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <View
+        android:id="@+id/greyBox1"
+        android:layout_width="412dp"
+        android:layout_height="119dp"
+        android:background="@drawable/cuadro_gris_redondeado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.339"
+        app:layout_constraintWidth_percent="0.3" />
+
+
+    <ImageView
+        android:id="@+id/imageSeparador3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="292dp"
+        android:layout_weight="1"
+        android:src="@drawable/separador_v1"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/textDescripcionPerfil"
+        android:layout_width="355dp"
+        android:layout_height="88dp"
+        android:fontFamily="@font/news_cycle"
+        android:text="Biografía:"
+        android:textColor="#3A0CA3"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageSeparador3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/greyBox1"
+        app:layout_constraintVertical_bias="0.375" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

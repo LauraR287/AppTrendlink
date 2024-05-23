@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ENCABEZADO DE LA APP -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/news_cycle"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:text="TrendLink"
+        android:textColor="#3A0CA3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="14dp" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/separador_v2"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/atras"
+        android:layout_width="63dp"
+        android:layout_height="41dp"
+        android:backgroundTint="#3A0CA3"
+        android:fontFamily="@font/news_cycle"
+        android:text="Atrás"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+
+    <ImageView
+        android:id="@+id/fotoPerfil"
+        android:layout_width="103dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="100dp"
+        android:layout_weight="1"
+        android:src="@drawable/usuario"
+        app:tint="#828282"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/CiudadPais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/news_cycle"
+        android:text="Bogotá, Colombia"
+        android:textColor="#480CA8"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nombre"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/news_cycle"
+        android:layout_marginTop="168dp"
+        android:text="Nombre "
+        android:textColor="#480CA8"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toEndOf="@+id/fotoPerfil"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/biografia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Biografía:"
+        android:textColor="#480CA8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/news_cycle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/greyBox3"
+        android:layout_width="256dp"
+        android:layout_height="26dp"
+        android:background="@drawable/cuadro_gris_redondeado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.426"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <View
+        android:id="@+id/greyBox2"
+        android:layout_width="244dp"
+        android:layout_height="158dp"
+        android:background="@drawable/cuadro_gris_redondeado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.602"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <TextView
+        android:id="@+id/usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Usuario:"
+        android:textColor="#480CA8"
+        android:fontFamily="@font/news_cycle"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextUser"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/news_cycle"
+        android:hint="Ingresa tu nombre de usuario"
+        android:textColor="#515151"
+        android:textColorHint="#B0B0B0"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/greyBox3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/greyBox3"/>
+
+    <EditText
+        android:id="@+id/DescripcionUser"
+        android:layout_width="212dp"
+        android:layout_height="129dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/news_cycle"
+        android:gravity="top|start"
+        android:hint="¡Escribe sobre ti!"
+        android:textColor="#515151"
+        android:textColorHint="#B0B0B0"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/greyBox2"
+        app:layout_constraintEnd_toEndOf="@+id/greyBox2"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="@+id/greyBox2"
+        app:layout_constraintTop_toTopOf="@+id/greyBox2"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <Button
+        android:id="@+id/buttonChanges"
+        android:layout_width="158dp"
+        android:layout_height="41dp"
+        android:backgroundTint="#3A0CA3"
+        android:fontFamily="@font/news_cycle"
+        android:text="Guardar cambios"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.797"
+        app:layout_constraintWidth_percent="0.3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

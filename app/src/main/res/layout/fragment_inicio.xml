@@ -34,18 +34,4 @@
     <!-- FIN ENCABEZADO DE LA APP -->
 
 
-    <ImageView
-        android:id="@+id/perfil1"
-        android:layout_width="45dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_weight="1"
-        android:src="@drawable/usuario"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="70dp" />
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.TrendLink"
         tools:targetApi="31" >
         <activity
-            android:name=".MainActivity"
+            android:name=".MenuActivity"
             android:exported="true"/>
         <activity
             android:name=".PasswordRecoveryActivity"
@@ -22,13 +22,10 @@
             android:name=".MensajesActivity"
             android:exported="true"/>
         <activity
-            android:name=".MensajesEliminadosActivity"
-            android:exported="true"/>
-        <activity
-            android:name=".ChatEliminadoActivity"
+            android:name=".NewAccountActivity"
             android:exported="true"/>
     <activity
-        android:name=".MainActivityLogin"
+        android:name=".LoginActivity"
         android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
