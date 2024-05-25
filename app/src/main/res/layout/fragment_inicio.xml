@@ -7,6 +7,33 @@
     android:background="#FFFFFF">
 
     <!-- INICIO ENCABEZADO DE LA APP -->
+
+    <ImageView
+        android:id="@+id/perfil1"
+        android:layout_width="52dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toStartOf="@+id/nombre1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separador1"
+        app:srcCompat="@drawable/usuario"
+        app:tint="#828282"
+        tools:ignore="MissingContraints" />
+
+    <ImageView
+        android:id="@+id/perfil2"
+        android:layout_width="52dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separador2"
+        app:srcCompat="@drawable/usuario"
+        app:tint="#828282"
+        tools:ignore="MissingContraints" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -31,21 +58,220 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
-    <!-- FIN ENCABEZADO DE LA APP -->
-
+    <ImageView
+        android:id="@+id/separador1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:layout_weight="1"
+        android:src="@drawable/separador_v1"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
-        android:id="@+id/perfil1"
-        android:layout_width="45dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="16dp"
+        android:id="@+id/separador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="332dp"
         android:layout_weight="1"
-        android:src="@drawable/usuario"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/separador_v1"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="70dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="414dp"
+        android:layout_height="126dp"
+        android:background="@drawable/cuadro_gris_oscuro_redondeado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-3dp">
 
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="52dp"
+            android:layout_height="63dp"
+            android:layout_marginEnd="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/contenedor"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.349"
+            app:srcCompat="@drawable/usuario"
+            app:tint="#828282"
+            tools:ignore="MissingContraints" />
+
+        <ImageView
+            android:id="@+id/contenedor"
+            android:layout_width="238dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.405"
+            app:srcCompat="@drawable/caja_comentario"
+            tools:ignore="MissingContraints" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:ems="15"
+            android:hint="Ingresa lo que estas pensando"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/contenedor"
+            app:layout_constraintStart_toStartOf="@+id/contenedor"
+            app:layout_constraintTop_toTopOf="@+id/contenedor" />
+
+        <ImageButton
+            android:id="@+id/adjuntar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginEnd="48dp"
+            android:background="#e0e0e0"
+            android:contentDescription="Adjuntar imagen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/enviar"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.461"
+            app:srcCompat="@drawable/adjuntar"
+            app:tint="#F72585" />
+
+        <ImageButton
+            android:id="@+id/enviar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="298dp"
+            android:background="#e0e0e0"
+            android:contentDescription="Enviar publicación"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.474"
+            app:srcCompat="@drawable/enviar"
+            app:tint="#F72585" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/nombre1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/news_cycle"
+        android:text="Valentina Hernandez"
+        android:textColor="#3A0CA3"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separador1" />
+
+    <TextView
+        android:id="@+id/nombre2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/news_cycle"
+        android:text="Juan Camilo Rodriguez"
+        android:textColor="#3A0CA3"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separador2" />
+
+    <TextView
+        android:id="@+id/rol1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/news_cycle"
+        android:text="Común"
+        android:textColor="#3A0CA3"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separador1" />
+
+    <TextView
+        android:id="@+id/rol2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/news_cycle"
+        android:text="Profesional"
+        android:textColor="#3A0CA3"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separador2" />
+
+    <TextView
+        android:id="@+id/texto1"
+        android:layout_width="373dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="260dp"
+        android:fontFamily="@font/news_cycle"
+        android:text="Hola a todos, ¿Alguien podría diseñar mi vestido de bodas?"
+        android:textColor="#3A0CA3"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/like"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto1"
+        app:srcCompat="@drawable/corazon_vacio"
+        app:tint="#F72585"
+        android:contentDescription="Da un like"/>
+
+    <ImageView
+        android:id="@+id/comentario"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="312dp"
+        android:background="#FFFFFF"
+        android:contentDescription="Comentar publicación"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto1"
+        app:srcCompat="@drawable/comentario"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="402dp"
+        android:layout_height="676dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="230dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separador1"
+        app:srcCompat="@drawable/dise_o1" />
+
+    <!-- FIN ENCABEZADO DE LA APP -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

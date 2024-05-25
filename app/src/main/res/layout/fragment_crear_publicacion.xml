@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ENCABEZADO DE LA APP -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/news_cycle"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:text="TrendLink"
+        android:textColor="#3A0CA3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="14dp" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/separador_v2"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <!-- BOTON ATRAS -->
+    <Button
+        android:id="@+id/atras"
+        android:layout_width="63dp"
+        android:layout_height="41dp"
+        android:backgroundTint="#3A0CA3"
+        android:fontFamily="@font/news_cycle"
+        android:text="Atrás"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <!-- CUADRO DE DISEÑO -->
+    <ImageView
+        android:id="@+id/cuadroDeDiseño"
+        android:layout_width="311dp"
+        android:layout_height="284dp"
+        android:layout_marginTop="84dp"
+        android:layout_weight="1"
+        android:src="@drawable/cuadro_de_disenio"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp" />
+
+    <!-- CUADRO DE DESCRIPCION -->
+
+    <ImageView
+        android:id="@+id/imagenDiseño"
+        android:layout_width="300dp"
+        android:layout_height="256dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dise_o1"
+        tools:ignore="DuplicateIds,MissingConstraints"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <!-- BOTON PUBLICAR -->
+
+    <EditText
+        android:layout_width="292dp"
+        android:layout_height="95dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/cuadro_gris_redondeado"
+        android:ems="15"
+        android:hint="Agrega una descripción a tu publicación."
+        android:inputType="text"
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="460dp" />
+
+    <View
+        android:layout_width="186dp"
+        android:layout_height="37dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/cuadro_morado_redondeado"
+        app:layout_constraintBottom_toBottomOf="@+id/BotonGuardar"
+        app:layout_constraintEnd_toEndOf="@+id/BotonGuardar"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/BotonGuardar"
+        app:layout_constraintTop_toTopOf="@+id/BotonGuardar"
+        app:layout_constraintVertical_bias="0.47"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/BotonGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publicar diseño"
+        android:textColor="#FFFF"
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="592dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
