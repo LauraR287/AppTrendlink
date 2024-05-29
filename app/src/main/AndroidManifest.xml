@@ -18,15 +18,6 @@
         <activity
             android:name=".PasswordRecoveryActivity"
             android:exported="true"/>
-        <activity
-            android:name=".MensajesActivity"
-            android:exported="true"/>
-        <activity
-            android:name=".MensajesEliminadosActivity"
-            android:exported="true"/>
-        <activity
-            android:name=".ChatEliminadoActivity"
-            android:exported="true"/>
     <activity
         android:name=".MainActivityLogin"
         android:exported="true">
