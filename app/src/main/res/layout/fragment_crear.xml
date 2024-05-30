@@ -34,4 +34,94 @@
 
     <!-- FIN ENCABEZADO DE LA APP -->
 
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097"
+        app:srcCompat="@drawable/puntos_suspensivos_del_circulo"
+        app:tint="#3A0CA3" />
+
+
+    <LinearLayout
+        android:id="@+id/colorPalette"
+        android:layout_width="266dp"
+        android:layout_height="46dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/drawingView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/color_black"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="#000000" />
+
+        <ImageButton
+            android:id="@+id/color_red"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="#F44336" />
+
+        <ImageButton
+            android:id="@+id/color_blue"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3" />
+
+        <ImageButton
+            android:id="@+id/color_green"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="#8BC34A" />
+
+        <ImageButton
+            android:id="@+id/color_yellow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="#FFC107" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/prototipo"
+        android:layout_width="520dp"
+        android:layout_height="540dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.769"
+        app:srcCompat="@drawable/creacion" />
+
+    <com.lrincon.trendlink.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="368dp"
+        android:layout_height="502dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

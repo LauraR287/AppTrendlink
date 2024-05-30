@@ -1,16 +1,20 @@
 package com.lrincon.trendlink
 
 import android.util.Log
-import android.widget.EditText
 import android.widget.TextView
-import com.google.firebase.auth.FirebaseAuth
+import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
 
-data class usuario(val apellido: String, val email: String, val nombre: String, val descripcion: String)
+data class usuario(
+    val apellido: String = "",
+    val email: String = "",
+    val nombre: String = "",
+    val descripcion: String = ""
+)
 
 class FirebaseHelperUser {
     fun newUser(database: DatabaseReference, nombre: String, apellido: String, email:String, descripcion: String) {
-        val usuarioId = "$nombre $apellido"
+        val usuarioId = email.replace(".", ",")
 
         if (usuarioId != null) {
             val Usuario = usuario(apellido, email, nombre, descripcion)
@@ -23,39 +27,33 @@ class FirebaseHelperUser {
             .addOnSuccessListener { dataSnapshot ->
                 Log.i("Informacion", dataSnapshot.toString())
                 if (dataSnapshot.exists()) {
-                    val userIds = mutableListOf<String>()
+                    val userInfoList = mutableListOf<String>()
                     for (snapshot in dataSnapshot.children) {
-                        val userId = snapshot.key
-                        userId?.let {
-                            userIds.add(it)
+                        val usuario = snapshot.getValue(usuario::class.java)
+                        usuario?.let {
+                            val userInfo = "${it.nombre} ${it.apellido}"
+                            userInfoList.add(userInfo)
                         }
                     }
-                    val userIdsString = userIds.joinToString(separator = "\n")
-                    editText.text = userIdsString
-                } else {
-                    // Handle the case where no data exists under "usuarios"
-                    editText.text = "No hay usuarios disponibles"
+                    val userInfoString = userInfoList.joinToString(separator = "\n")
+                    editText.text = userInfoString
                 }
-            }
-            .addOnFailureListener { exception ->
-                // Handle any errors that occurred during the data retrieval process
-                editText.text = "Error fetching users: ${exception.message}"
             }
     }
 
-    fun modificarInfo(database: DatabaseReference, nombre: String, descripcion: String) {
-        database.child("usuarios").get().addOnSuccessListener { dataSnapshot ->
-            for (userSnapshot in dataSnapshot.children) {
-                val userId = userSnapshot.key ?: continue
-                val updates = mapOf<String, Any>(
-                    "nombre" to nombre,
-                    "descripcion" to descripcion
-                )
-                database.child("usuarios").child(userId).updateChildren(updates)
-            }
-        }.addOnFailureListener { exception ->
-            // Manejo de errores
-            exception.printStackTrace()
+    fun modificarInfo(database: DatabaseReference, usuarioId: String, nombre: String, descripcion: String) {
+        val updates = mutableMapOf<String, Any>()
+
+        if (!nombre.isNullOrEmpty()) {
+            updates["nombre"] = nombre
+        }
+
+        if (!descripcion.isNullOrEmpty()) {
+            updates["descripcion"] = descripcion
+        }
+
+        if (updates.isNotEmpty()) {
+            database.child(usuarioId).updateChildren(updates)
         }
     }
 }

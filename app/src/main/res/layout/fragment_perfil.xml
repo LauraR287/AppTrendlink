@@ -52,34 +52,22 @@
 
     <!-- FIN ENCABEZADO DE LA APP -->
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115"
-        app:srcCompat="@drawable/usuario"
-        app:tint="#828282" />
 
     <ImageButton
         android:id="@+id/EditarPerfil"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.237"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.209"
-        app:srcCompat="@drawable/lapiz"
-        app:tint="#8000FF"
         android:backgroundTint="@color/white"
         android:clickable="true"
-        android:focusable="true"/>
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154"
+        app:srcCompat="@drawable/configuracion2"
+        app:tint="#3A0CA3" />
 
     <TextView
         android:id="@+id/textNombreEnPerfil"
@@ -92,7 +80,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageSeparador2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.303" />
@@ -108,11 +96,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageSeparador2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.592" />
-
 
     <TextView
         android:id="@+id/CerrarSesion"
@@ -125,7 +112,7 @@
         android:focusable="true"
         android:fontFamily="@font/news_cycle"
         android:text="Cerrar Sesión"
-        android:textColor="#8000FF"
+        android:textColor="#3A0CA3"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,7 +129,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.212"
         app:srcCompat="@drawable/exit"
-        app:tint="#8000FF"
+        app:tint="#3A0CA3"
         android:backgroundTint="@color/white"
         android:clickable="true"
         android:focusable="true"/>
