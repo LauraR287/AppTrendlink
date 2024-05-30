@@ -24,13 +24,20 @@ class EditarPerfilFragment: Fragment(R.layout.fragment_modificar_perfil) {
         val buttonGuardarCambios: Button = view.findViewById(R.id.buttonChanges)
 
         val editTextUser: EditText = view.findViewById(R.id.editTextUser)
+        val editTextApellido: EditText = view.findViewById(R.id.editTextApellido)
         val descripcionUser: EditText = view.findViewById(R.id.DescripcionUser)
+        val user: TextView = view.findViewById(R.id.Nombre)
 
         database = FirebaseDatabase.getInstance().reference.child("usuarios")
         firebaseHelper = FirebaseHelperUser()
 
         val currentUser = FirebaseAuth.getInstance().currentUser
         val userId = currentUser?.email?.replace(".", ",")
+
+        if (userId != null) {
+            val userDatabaseRef = database.child(userId)
+            firebaseHelper.consultarUser(userDatabaseRef, user, null)
+        }
 
         buttonAtras.setOnClickListener {
             val fragment = PerfilFragment()
@@ -41,13 +48,16 @@ class EditarPerfilFragment: Fragment(R.layout.fragment_modificar_perfil) {
         }
 
         buttonGuardarCambios.setOnClickListener {
-            val nombre = editTextUser.text.toString()
+            val user_name = editTextUser.text.toString()
+            val apellido = editTextApellido.text.toString()
             val descripcion = descripcionUser.text.toString()
 
-            Log.i("USUARIO ID", userId.toString())
+            Log.e("UWSERNAME", user_name)
+
+            val userId = currentUser?.email?.replace(".", ",")
 
             if (userId != null) {
-                firebaseHelper.modificarInfo(database, userId, nombre, descripcion)
+                firebaseHelper.modificarInfo(database, userId, user_name, apellido, descripcion)
                 val fragment = PerfilFragment()
                 val transaction = parentFragmentManager.beginTransaction()
                 transaction.replace(R.id.containerView, fragment)

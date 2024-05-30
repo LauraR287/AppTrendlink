@@ -41,19 +41,54 @@ class FirebaseHelperUser {
             }
     }
 
-    fun modificarInfo(database: DatabaseReference, usuarioId: String, nombre: String, descripcion: String) {
+    fun consultarUser(database: DatabaseReference, nombreTextView: TextView, descripcionTextView: TextView?) {
+        database.get()
+            .addOnSuccessListener { dataSnapshot ->
+                Log.i("Informacion", dataSnapshot.toString())
+                if (dataSnapshot.exists()) {
+                    val usuario = dataSnapshot.getValue(usuario::class.java)
+                    usuario?.let {
+                        val userInfo = "${it.nombre} ${it.apellido}"
+                        nombreTextView.text = userInfo
+                        if (descripcionTextView != null) {
+                            descripcionTextView.text = it.descripcion
+                        }
+                    }
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.e("FirebaseError", "Error al obtener los datos del usuario", exception)
+            }
+    }
+
+    fun modificarInfo(database: DatabaseReference, usuarioId: String, nombre: String?, apellido: String?, descripcion: String?) {
         val updates = mutableMapOf<String, Any>()
 
         if (!nombre.isNullOrEmpty()) {
             updates["nombre"] = nombre
+            Log.i("NOMBRE", nombre)
         }
-
+        if (!apellido.isNullOrEmpty()) {
+            updates["apellido"] = apellido
+            Log.i("APELLIDO", apellido)
+        }
         if (!descripcion.isNullOrEmpty()) {
             updates["descripcion"] = descripcion
+            Log.i("DESCRIPCION", descripcion)
         }
-
         if (updates.isNotEmpty()) {
             database.child(usuarioId).updateChildren(updates)
+                .addOnSuccessListener {
+                    Log.i("Firebase", "Actualización exitosa")
+                }
+                .addOnFailureListener { exception ->
+                    Log.e("Firebase", "Error al actualizar", exception)
+                }
+            Log.i("UPDATES", updates.toString())
+        } else {
+            Log.i("Firebase", "No hay actualizaciones que realizar")
         }
     }
+
+
 }

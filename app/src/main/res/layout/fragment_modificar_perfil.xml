@@ -49,35 +49,21 @@
 
 
     <TextView
-        android:id="@+id/CiudadPais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/news_cycle"
-        android:text="Bogotá, Colombia"
-        android:textColor="#480CA8"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nombre"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
         android:id="@+id/Nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="196dp"
         android:fontFamily="@font/news_cycle"
         android:text="Nombre "
         android:textColor="#480CA8"
         android:textSize="22sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/usuario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -129,21 +115,22 @@
         android:id="@+id/greyBox3"
         android:layout_width="256dp"
         android:layout_height="26dp"
+        android:layout_marginEnd="36dp"
         android:background="@drawable/cuadro_gris_redondeado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="w,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.326"
+        app:layout_constraintVertical_bias="0.377"
         app:layout_constraintWidth_percent="0.3" />
 
     <TextView
-        android:id="@+id/usuario"
+        android:id="@+id/Apellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:text="Usuario:"
+        android:text="Apellido:"
         android:textColor="#480CA8"
         android:fontFamily="@font/news_cycle"
         android:textSize="16sp"
@@ -160,17 +147,35 @@
         android:layout_height="22dp"
         android:background="@android:color/transparent"
         android:fontFamily="@font/news_cycle"
-        android:hint="Ingresa tu nombre de usuario"
+        android:hint="Ingresa tu nombre"
         android:textColor="#515151"
         android:textColorHint="#B0B0B0"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/greyBox3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/greyBox3"
         app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/news_cycle"
+        android:hint="Ingresa tu apellido"
+        android:textColor="#515151"
+        android:textColorHint="#B0B0B0"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/greyBox4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/greyBox4"
+        app:layout_constraintVertical_bias="0.75" />
 
     <TextView
         android:id="@+id/usuario"
@@ -178,7 +183,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:fontFamily="@font/news_cycle"
-        android:text="Usuario:"
+        android:text="Nombre:"
         android:textColor="#480CA8"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -187,24 +192,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.377"
         tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editTextUser"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/news_cycle"
-        android:hint="Ingresa tu nombre de usuario"
-        android:textColor="#515151"
-        android:textColorHint="#B0B0B0"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/greyBox3"
-        app:layout_constraintEnd_toEndOf="@+id/greyBox3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/greyBox3"
-        app:layout_constraintTop_toTopOf="@+id/greyBox3"
-        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/DescripcionUser"

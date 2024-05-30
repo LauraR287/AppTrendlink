@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase
 class PerfilFragment: Fragment(R.layout.fragment_perfil) {
 
     private lateinit var database: DatabaseReference
-    private lateinit var auth: FirebaseAuth
+    private lateinit var firebaseHelper: FirebaseHelperUser
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -24,15 +24,20 @@ class PerfilFragment: Fragment(R.layout.fragment_perfil) {
         val TextCerrarSesion = view.findViewById<TextView>(R.id.CerrarSesion)
 
         database = FirebaseDatabase.getInstance().getReference("usuarios")
+        firebaseHelper = FirebaseHelperUser()
 
         val currentUser = FirebaseAuth.getInstance().currentUser
         val userId = currentUser?.email?.replace(".", ",")
 
         Log.i("USUARIO ID", userId.toString())
 
-
         val descripcion = view.findViewById<TextView>(R.id.textDescripcionPerfil)
         val nombre = view.findViewById<TextView>(R.id.textNombreEnPerfil)
+
+        if (userId != null) {
+            val userDatabaseRef = database.child(userId)
+            firebaseHelper.consultarUser(userDatabaseRef, nombre, descripcion)
+        }
 
         buttonEditarPerfil.setOnClickListener {
             val fragment = EditarPerfilFragment()
