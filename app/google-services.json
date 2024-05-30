@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "125541400492",
+    "project_id": "desarrollo-8b4aa",
+    "storage_bucket": "desarrollo-8b4aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125541400492:android:3c3f936e0b4beb7af3c409",
+        "android_client_info": {
+          "package_name": "com.example.apptrendlink_valentinahernandez"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvFbEzoU3natX96XjDw_pkzYZXUtf-P_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125541400492:android:216d068f39081b44f3c409",
+        "android_client_info": {
+          "package_name": "com.lrincon.trendlink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvFbEzoU3natX96XjDw_pkzYZXUtf-P_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
